@@ -7,12 +7,6 @@ import os
 
 load_dotenv()
 LIMIT_FRAME = 1
-
-import cv2
-import easyocr
-import json
-
-
 class VideoProcessor:
     def __init__(self, openai_api_key):
         self.openai_api_key = openai_api_key
@@ -88,7 +82,7 @@ class VideoProcessor:
 
         keys_list[0] = "Fuck"  # Test
         for i in range(len(keys_list)):
-            grading_result = ai_grading(keys_list[i])
+            grading_result = self.ai_grading(keys_list[i])
             json_text_grading_result = grading_result.split(" - ")[0]
             if json.loads(json_text_grading_result) != {}:
                 print(keys_list[i], grading_result)
@@ -133,16 +127,3 @@ class VideoProcessor:
             return completion.choices[0].message.content
         else:
             return ""
-
-
-if __name__ == "__main__":
-    input_video_path = "video_input/IMG_9733.MOV"
-    output_video_path = "video_output/output.mp4"
-    input_json_path = "json_input/test.json"
-    # blur_radius = 25
-
-    # frames, frame_value_dict = detect_words(input_video_path)
-    # print(frames, frame_value_dict)
-    # blur_video(frames, output_video_path, blur_radius, frame_value_dict)
-
-    collect_text(input_json_path)
