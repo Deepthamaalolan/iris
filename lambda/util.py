@@ -4,6 +4,7 @@ import json
 from dotenv import load_dotenv
 from openai import OpenAI
 import os
+import numpy as np
 
 load_dotenv()
 LIMIT_FRAME = 1
@@ -12,7 +13,7 @@ class VideoProcessor:
         self.openai_api_key = openai_api_key
 
     def detect_words(self, input_video_path, extend_frames=3):
-        cap = cv2.VideoCapture(input_video_path)
+        cap = cv2.VideoCapture('memory.mp4', cv2.CAP_FFMPEG)
         reader = easyocr.Reader(['en'])
         word_frame_dict = {}
         frames = []

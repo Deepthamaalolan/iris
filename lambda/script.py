@@ -1,7 +1,7 @@
 import json
 import boto3
 from urllib.parse import urlparse, unquote
-
+import util
 # Configure AWS SDK
 s3 = boto3.client('s3')
 sqs = boto3.client('sqs')
@@ -24,6 +24,18 @@ def handler(event, context):
                 'Key': key
             }
             data = s3.get_object(**params)
+            # We will start the video process here 
+            mp4_data = data['Body'].read()
+            with open('temp.mp4', 'wb') as file:
+                file.write(mp4_data)
+            frames, word_frame_dict = util.detect_words('temp.mp4')
+            with open('word_frame_dict.json', 'w') as f:
+                json.dump(word_frame_dict, f)
+            util.blur_video(frames, 'final_video', 31, word_frame_dict)
+
+
+
+            
 
             # Process the video (for example, logging its size)
             print(f'Fetched video from S3: {key}')
