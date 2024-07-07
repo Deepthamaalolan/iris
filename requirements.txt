@@ -14,3 +14,10 @@ openai
 moviepy 
 pytube
 #brew install ffmpeg
+google-generativeai
+moviepy
+transformers
+onnxruntime
+torchaudio
+matplotlib
+whisper-timestamped

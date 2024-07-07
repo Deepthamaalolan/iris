@@ -52,7 +52,7 @@ def transcribe_audio(audio_file):
     import openai
     openai.api_key = api_key
     audio_file = open(audio_file, "rb")
-    transcript = openai.Audio.transcribe("whisper-1", audio_file)
+    transcript = openai.Audio.transcribe(". ", audio_file)
     return transcript['text']
 
 def clean_text(text):
