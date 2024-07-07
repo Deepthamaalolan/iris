@@ -54,7 +54,7 @@ class VideoProcessor:
 
         frame_height, frame_width, _ = frames[0].shape
         fps = 30
-        fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+        fourcc = cv2.VideoWriter_fourcc(*'X', '2', '6', '4')
         out = cv2.VideoWriter(output_video_path, fourcc, fps, (frame_width, frame_height))
         margin = 50
 
@@ -83,7 +83,7 @@ class VideoProcessor:
         fps = int(cap.get(cv2.CAP_PROP_FPS))
         frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
         frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-        fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+        fourcc = cv2.VideoWriter_fourcc(*'X', '2', '6', '4')
         out = cv2.VideoWriter(output_video_path, fourcc, fps, (frame_width, frame_height))
         margin = 50
 

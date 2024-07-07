@@ -17,18 +17,6 @@ if video:
                     - :red[Sensitive Information Detected]
                     """)
         st.video(video)
-        if st.button("Fix my video"):
-            with st.spinner(text="Blurring unwanted elements..."):
-                with open("word_frame_dict.json", "r") as f:
-                    word_frame_dict = json.load(f)
-                video_processor.blur_video_from_word_frame_dict("video_path/IMG_9733 2.MOV", "output_video/output.mp4", 31, word_frame_dict)
-                time.sleep(300)
-                st.write("Your video has been fixed. Please review the updated video below.")
-                st.markdown("""
-                    - :green[No Offensive Language Detected]
-                    - :green[No Sensitive Information Detected]
-                    """)
-                st.video("output_video/output.mp4")
         with st.expander("Show Detailed Analysis"):
             # Offensive Language Section
             st.header("Offensive Language Detected")
@@ -65,3 +53,16 @@ if video:
 
             # Footer
             st.write("By following these guidelines, you can help ensure that your video complies with TikTok's privacy standards.")
+
+        if st.button("Fix my video"):
+            with st.spinner(text="Blurring unwanted elements..."):
+                with open("word_frame_dict.json", "r") as f:
+                    word_frame_dict = json.load(f)
+                video_processor.blur_video_from_word_frame_dict("video_path/IMG_9733 2.MOV", "output_video/output.mp4", 31, word_frame_dict)
+                st.write("Your video has been fixed. Please review the updated video below.")
+                st.markdown("""
+                    - :green[No Offensive Language Detected]
+                    - :green[No Sensitive Information Detected]
+                    """)
+                with open("./output_video/output.mp4", 'rb') as v:
+                    st.video(v)
