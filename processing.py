@@ -1,7 +1,7 @@
 import cv2  # for VS Code user
 import easyocr
 import json
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from openai import OpenAI
 import os
 import numpy as np
