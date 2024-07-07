@@ -74,6 +74,42 @@ class VideoProcessor:
         out.release()
         cv2.destroyAllWindows()
 
+    def blur_video_from_word_frame_dict(self, input_video_path, output_video_path, blur_radius, word_frame_dict):
+        cap = cv2.VideoCapture(input_video_path)
+        if not cap.isOpened():
+            print("Error: Could not open video.")
+            return
+
+        fps = int(cap.get(cv2.CAP_PROP_FPS))
+        frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+        frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+        fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+        out = cv2.VideoWriter(output_video_path, fourcc, fps, (frame_width, frame_height))
+        margin = 50
+
+        frame_number = 0
+        while True:
+            ret, frame = cap.read()
+            if not ret:
+                break
+
+            for word, details in word_frame_dict.items():
+                for frame_num, bbox in details:
+                    if frame_number == frame_num:
+                        top_left, bottom_right = (bbox[0], bbox[2])
+                        top_left = (max(top_left[0] - margin, 0), max(top_left[1] - margin, 0))
+                        bottom_right = (min(bottom_right[0] + margin, frame_width), min(bottom_right[1] + margin, frame_height))
+                        roi = frame[top_left[1]:bottom_right[1], top_left[0]:bottom_right[0]]
+                        blurred_roi = cv2.GaussianBlur(roi, (blur_radius, blur_radius), 0)
+                        frame[top_left[1]:bottom_right[1], top_left[0]:bottom_right[0]] = blurred_roi
+
+            out.write(frame)
+            frame_number += 1
+
+        cap.release()
+        out.release()
+        cv2.destroyAllWindows()
+
     def collect__text_from_json(self, json_path):
         with open(json_path, "r") as f:
             frame_value_dict = json.load(f)
