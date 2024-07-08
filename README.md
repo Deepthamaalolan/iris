@@ -2,7 +2,6 @@
 
 **License**: MIT  
 **Author**: @chrislevn @stephanienguyen2020 @Deepthamaalolan @LiyuZer
-<img src="/images/logo.png" alt="Logo" width="80" height="80" style="vertical-align:bottom"/>
 ## Overview
 Iris is a project designed to create a censorship engine for TikTok, focusing on redacting sensitive and inappropriate content within videos. This solution addresses both video and audio mediums, providing a holistic approach to content moderation.
 ![Flow Image](/images/flow.png)
