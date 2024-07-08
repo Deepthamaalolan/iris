@@ -17,7 +17,7 @@ In today's data-rich world, social media platforms like TikTok are often inundat
 ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
 
 ## Features
-- **Detailed Quality Check**: Utilizes General AI to scan through detected words and audio clips, summarizing the content identified.
+- **Detailed Quality Check**: Utilizes Gen AI to scan through detected words and audio clips, summarizing the content identified.
 - **OCR and Whisper Speech to Text API Integration**: Employs Easy OCR models for text detection in videos and Whisper for audio speech detection.
 - **Video Censorship**: Automatically blurs regions of interest containing harmful or sensitive information.
 - **Audio Censorship**: Censors audio containing harmful or sensitive information.
