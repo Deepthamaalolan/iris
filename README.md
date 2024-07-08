@@ -9,7 +9,6 @@ Iris is a project designed to create a censorship engine for TikTok, focusing on
 In today's data-rich world, social media platforms like TikTok are often inundated with harmful and inappropriate content. As human moderation becomes increasingly challenging, computerized supervision is essential. Iris serves as a fully autonomous system that enables companies and users to blur out sensitive or inappropriate information seamlessly. We wanted to create a special censorship engine, that will sanitize a video so that we won't have to do it ourselves. Enabling us in creating a safer, cleaner internet. 
 
 ## Built With
-Python, Streamlit, Open AI Whisper API, Gemini API, EasyOcr
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 ![OpenAI Whisper API](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
