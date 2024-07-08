@@ -10,6 +10,11 @@ In today's data-rich world, social media platforms like TikTok are often inundat
 
 ## Built With
 Python, Streamlit, Open AI Whisper API, Gemini API, EasyOcr
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![OpenAI Whisper API](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
+![Gemini API](https://img.shields.io/badge/Gemini-00A1E0?style=for-the-badge&logo=gemini&logoColor=white)
+![EasyOCR](https://img.shields.io/badge/EasyOCR-FFD700?style=for-the-badge&logo=easyocr&logoColor=black)
 
 ## Features
 - **Detailed Quality Check**: Utilizes General AI to scan through detected words and audio clips, summarizing the content identified.
