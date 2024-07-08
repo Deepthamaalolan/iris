@@ -1,8 +1,5 @@
-# Iris 
-<p align="left">
-  <img src="/images/logo.png" alt="Logo" width="50" height="50"/>
-  <h1>Project Name</h1>
-</p>
+# Iris <img src="/images/logo.png" alt="Logo" width="80" height="80" style="vertical-align:middle"/>
+
 **License**: MIT  
 **Author**: @chrislevn @stephanienguyen2020 @Deepthamaalolan @LiyuZer
 
