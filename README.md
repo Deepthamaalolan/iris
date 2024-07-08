@@ -1,6 +1,6 @@
 # Iris
 <p align="left">
-  <img src="/images/flow.png)" alt="Logo" width="50" height="50"/>
+  <img src="/images/flow.png" alt="Logo" width="50" height="50"/>
   <h1>Project Name</h1>
 </p>
 **License**: MIT  
