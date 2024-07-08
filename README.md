@@ -14,6 +14,7 @@ In today's data-rich world, social media platforms like TikTok are often inundat
 ![OpenAI Whisper API](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
 ![Gemini API](https://img.shields.io/badge/Gemini-00A1E0?style=for-the-badge&logo=gemini&logoColor=white)
 ![EasyOCR](https://img.shields.io/badge/EasyOCR-FFD700?style=for-the-badge&logo=easyocr&logoColor=black)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
 
 ## Features
 - **Detailed Quality Check**: Utilizes General AI to scan through detected words and audio clips, summarizing the content identified.
