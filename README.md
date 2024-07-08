@@ -1,4 +1,4 @@
-# Iris <img src="/images/logo.png" alt="Logo" width="80" height="80" style="vertical-align:middle"/>
+# Iris <img src="/images/logo.png" alt="Logo" width="80" height="80" style="vertical-align:bottom"/>
 
 **License**: MIT  
 **Author**: @chrislevn @stephanienguyen2020 @Deepthamaalolan @LiyuZer
